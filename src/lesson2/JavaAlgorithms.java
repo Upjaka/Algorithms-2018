@@ -3,6 +3,7 @@ package lesson2;
 import kotlin.NotImplementedError;
 import kotlin.Pair;
 
+import java.io.File;
 import java.util.Set;
 
 @SuppressWarnings("unused")
@@ -31,9 +32,7 @@ public class JavaAlgorithms {
      *
      * В случае обнаружения неверного формата файла бросить любое исключение.
      */
-    static public Pair<Integer, Integer> optimizeBuyAndSell(String inputName) {
-        throw new NotImplementedError();
-    }
+    static public Pair<Integer, Integer> optimizeBuyAndSell(String inputName) { throw new NotImplementedError(); }
 
     /**
      * Задача Иосифа Флафия.
