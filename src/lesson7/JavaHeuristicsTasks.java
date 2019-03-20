@@ -5,7 +5,7 @@ import lesson5.Graph;
 import lesson5.Path;
 import lesson6.knapsack.Fill;
 import lesson6.knapsack.Item;
-import lesson7.ant.FormicVoyagingRathSearcher;
+import lesson7.ant.FormicVoyagingPathSearcher;
 
 import java.util.*;
 
@@ -43,14 +43,14 @@ public class JavaHeuristicsTasks {
      *              a, b - степени вляния феромонов и расстояния соответственно
      *              р - интенсивность испарения
      *              q - параметр,  имеющий значение порядка цены оптимального решения
-     *           iter - количество итераций алгоритма
+     *           iterations - количество итераций алгоритма
      *           initialPheromone - начальное значение феромона на ребрах
      */
     public static Path findVoyagingPathHeuristics(Graph graph,
                                                   double a, double b, double p, int q,
-                                                  int iter,
+                                                  int iterations,
                                                   double initialPheromone) {
-        FormicVoyagingRathSearcher formicVoyagingRathSearcher = new FormicVoyagingRathSearcher();
-        return formicVoyagingRathSearcher.findVoyagingPath(graph, a, b, p, q, iter, initialPheromone);
+        FormicVoyagingPathSearcher formicVoyagingPathSearcher = new FormicVoyagingPathSearcher();
+        return formicVoyagingPathSearcher.findVoyagingPath(graph, a, b, p, q, iterations, initialPheromone);
     }
 }
