@@ -5,8 +5,9 @@ import lesson5.Graph;
 import lesson5.Path;
 import lesson6.knapsack.Fill;
 import lesson6.knapsack.Item;
+import lesson7.ant.FormicVoyagingRathSearcher;
 
-import java.util.List;
+import java.util.*;
 
 // Примечание: в этом уроке достаточно решить одну задачу
 @SuppressWarnings("unused")
@@ -37,8 +38,19 @@ public class JavaHeuristicsTasks {
      *
      * Используйте parameters для передачи дополнительных параметров алгоритма
      * (не забудьте изменить тесты так, чтобы они передавали эти параметры)
+     *
+     * Параметры a, b, p, g - константные параметры для регулировки алгоритма
+     *              a, b - степени вляния феромонов и расстояния соответственно
+     *              р - интенсивность испарения
+     *              q - параметр,  имеющий значение порядка цены оптимального решения
+     *           iter - количество итераций алгоритма
+     *           initialPheromone - начальное значение феромона на ребрах
      */
-    public static Path findVoyagingPathHeuristics(Graph graph, Object... parameters) {
-        throw new NotImplementedError();
+    public static Path findVoyagingPathHeuristics(Graph graph,
+                                                  double a, double b, double p, int q,
+                                                  int iter,
+                                                  double initialPheromone) {
+        FormicVoyagingRathSearcher formicVoyagingRathSearcher = new FormicVoyagingRathSearcher();
+        return formicVoyagingRathSearcher.findVoyagingPath(graph, a, b, p, q, iter, initialPheromone);
     }
 }

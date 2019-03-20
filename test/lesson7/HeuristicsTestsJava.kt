@@ -13,7 +13,8 @@ class HeuristicsTestsJava : AbstractHeuristicsTests() {
     @Test
     @Tag("Impossible")
     fun testFindVoyagingPathHeuristics() {
-        findVoyagingPathHeuristics { let { JavaHeuristicsTasks.findVoyagingPathHeuristics(it) } }
+        findVoyagingPathHeuristics { let { JavaHeuristicsTasks.findVoyagingPathHeuristics(it,
+                1.0, 1.0, 0.7, 100, 20, 0.01) } }
     }
 
 }
